@@ -1,0 +1,18 @@
+<button class="sm:hidden" (click)="toggleGrid()">
+  <img src="icons/bx-menu.svg" alt="" />
+</button>
+
+<div
+  [ngClass]="gridOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'"
+  class="grid transition-[grid-template-rows] duration-400 ease-in-out"
+>
+  <nav class="overflow-hidden">
+    <div
+      class="h-20 grid grid-cols-[auto_auto_auto] items-center text-center font-berlin-demi sm:text-lg text-white bg-blue-primary px-2 gap-2"
+    >
+      <div>¿QUIÉNES SOMOS?</div>
+      <div>SERVICIOS</div>
+      <div>CONTÁCTANOS</div>
+    </div>
+  </nav>
+</div>

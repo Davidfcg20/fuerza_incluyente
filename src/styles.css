@@ -1,2 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+@plugin "daisyui";
+
+
+@font-face {
+  font-family: 'Berlin Sans FB';
+  src: url('../public/fonts/BRLNSR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Berlin Sans FB Demi';
+  src: url('../public/fonts/BRLNSDB.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins Light';
+  src: url('../public/fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --color-blue-primary: #2055a6;
+  --color-blue-secondary: #A6BBDB;
+  --color-yellow-secondary: #efe922;
+  --color-green-tertiary: #0e9850;
+  --font-berlin: "Berlin Sans FB", sans-serif;
+  --font-berlin-demi: "Berlin Sans FB Demi", sans-serif;
+  --font-poppins-light: "Poppins Light", sans-serif;
+}

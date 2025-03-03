@@ -1,0 +1,26 @@
+<div class="flex flex-col gap-2 py-4">
+  <div class="flex flex-col text-center px-12 sm:px-44">
+    <h2 class="font-berlin-demi">SERVICIOS</h2>
+    <hr class="border-t-blue-primary border-t-4 rounded-xl" />
+    <p class="px-4">
+      Disponemos de una amplia variedad de servicios y productos para tu
+      empresa.
+    </p>
+  </div>
+  <div class="grid sm:grid-cols-4 text-center">
+    @for (item of serviceCard(); track $index; let i = $even) { @for (subItem of
+    item; track $index; let e = $even) {
+    <div
+      [ngClass]="{
+        'sm:bg-blue-primary sm:text-white': i === e,
+        'sm:bg-blue-secondary sm:text-black': i !== e,
+        'bg-blue-primary text-white': e,
+        'bg-blue-secondary text-black': !e,
+      }"
+      class="flex justify-center items-center p-2 h-10 sm:h-32"
+    >
+      {{ subItem }}
+    </div>
+    } }
+  </div>
+</div>
