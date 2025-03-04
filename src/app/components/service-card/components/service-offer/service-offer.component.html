@@ -1,0 +1,17 @@
+<dialog id="service_offer_modal" class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+    <div class="flex flex-col gap-2 max-h-80 sm:max-h-none overflow-auto">
+      @for (item of serviceOffer(); track $index) {
+      <section>
+        <h2 class="font-berlin-demi">{{ item.title | uppercase }}</h2>
+        <p class="" [innerHTML]="item.text"></p>
+      </section>
+      }
+    </div>
+    <div class="modal-action justify-center">
+      <form method="dialog">
+        <button class="btn">Cerrar</button>
+      </form>
+    </div>
+  </div>
+</dialog>

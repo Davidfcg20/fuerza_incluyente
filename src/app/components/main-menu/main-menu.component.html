@@ -1,10 +1,6 @@
-<button class="sm:hidden" (click)="toggleGrid()">
-  <img src="icons/bx-menu.svg" alt="" />
-</button>
-
 <div
-  [ngClass]="gridOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'"
-  class="grid transition-[grid-template-rows] duration-400 ease-in-out"
+  [ngClass]="menuOpen() ? 'grid-rows-[1fr] pb-2 sm:pb-0' : 'grid-rows-[0fr] sm:grid-rows-[1fr]'"
+  class="grid transition-[grid-template-rows] sm:transition-none duration-400 ease-in-out"
 >
   <nav class="overflow-hidden">
     <div

@@ -1,17 +1,30 @@
-<header class="flex flex-col sm:flex-row font-berlin-demi sm:bg-white justify-between sm:px-4 lg:px-16">
-  <div class="bg-blue-primary sm:bg-white h-20 flex items-center justify-center">
-    <h1 class="text-white sm:text-black tracking-wide text-xl sm:text-3xl text-center">
-      CORPORACIÓN FUERZA INCLUYENTE
-    </h1>
+<header class="grid grid-rows-[1fr_auto_auto] sm:grid-cols-2 sm:grid-rows-2">
+  <div
+    class="flex flex-row items-center justify-center gap-2 sm:tracking-wide text-xl sm:text-3xl text-center h-20"
+  >
+    <button class="sm:hidden" (click)="setMenuOpen(!menuOpen())">
+      <img src="icons/bx-menu.svg" alt="" />
+    </button>
+    <h1 class="font-berlin-demi">CORPORACIÓN FUERZA INCLUYENTE</h1>
   </div>
-  <div class="flex flex-row items-center justify-center gap-4 my-4 sm:my-0">
+
+  <div class="sm:col-span-2 sm:order-3">
+    <app-main-menu [menuOpen]="menuOpen()" />
+  </div>
+
+  <div
+    class="flex flex-row gap-4 items-center justify-center sm:justify-end font-berlin-demi"
+  >
     <button class="bg-yellow-secondary rounded-xl h-12 px-4 text-black text-sm">
       DONACIONES
     </button>
-    <button class="bg-green-tertiary rounded-xl h-12 px-4 text-black text-sm">
+    <button
+      class="bg-green-tertiary rounded-xl h-12 px-4 text-black text-sm cursor-pointer"
+      onclick="legal_information_modal.showModal()"
+    >
       INFORMACIÓN LEGAL
     </button>
   </div>
 </header>
 
-<app-main-menu/>
+<app-legal-information />

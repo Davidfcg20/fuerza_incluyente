@@ -13,9 +13,56 @@
   </div>
   <div>
     <button
-      class="bg-yellow-secondary rounded-xl h-12 px-4 text-black text-sm font-berlin-demi"
+      class="bg-yellow-secondary rounded-xl h-12 px-4 text-black text-sm font-berlin-demi cursor-pointer"
+      onclick="my_modal_4.showModal()"
     >
       ¡CONÓCENOS MÁS!
     </button>
   </div>
 </div>
+
+<dialog id="my_modal_4" class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+    <div class="flex flex-col gap-2 max-h-80 sm:max-h-none overflow-auto">
+      <section>
+        <h2 class="font-berlin-demi">OBJETIVOS ESTRATÉGICOS</h2>
+        <p class="">
+          Consolidar la inclusión laboral: Fortalecer la inserción laboral de
+          personas con discapacidad en empresas públicas y privadas, mediante la
+          creación de programas de capacitación y empleo. <br />
+          Ampliar la autonomía y vida independiente: Desarrollar programas de
+          formación y apoyo para que las personas con discapacidad puedan vivir
+          de manera independiente y autónoma. <br />
+          Fortalecer la inclusión social: Promover la inclusión social de las
+          personas con discapacidad, sus familias, cuidadores y apoyos, mediante
+          la ejecución de proyectos y programas que fomenten la participación y
+          el acceso a servicios y oportunidades. <br />
+          Establecer alianzas estratégicas: Establecer alianzas con entidades
+          públicas y privadas, ONG y organizaciones de personas con discapacidad
+          para ampliar el impacto de nuestros programas.
+        </p>
+      </section>
+      <section>
+        <h2 class="font-berlin-demi">INDICADORES DE ÉXITO</h2>
+        <p class="">
+          Número de personas con discapacidad insertadas en el mercado
+          laboral.<br />
+          Número de programas de formación y apoyo para la autonomía y vida
+          independiente.<br />
+          Número de personas con discapacidad que acceden a servicios y
+          oportunidades.<br />
+          Número de alianzas establecidas con entidades públicas y privadas.<br />
+          Número de investigaciones y evaluaciones realizadas.<br />
+          Número de personas con discapacidad que acceden a nuestros programas y
+          servicios.
+        </p>
+      </section>
+    </div>
+
+    <div class="modal-action justify-center">
+      <form method="dialog">
+        <button class="btn">Cerrar</button>
+      </form>
+    </div>
+  </div>
+</dialog>
