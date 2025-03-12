@@ -4,7 +4,7 @@
       @for (item of serviceOffer(); track $index) {
       <section>
         <h2 class="font-berlin-demi">{{ item.title | uppercase }}</h2>
-        <p class="" [innerHTML]="item.text"></p>
+        <p class="whitespace-pre-line"> {{item.text}}</p>
       </section>
       }
     </div>

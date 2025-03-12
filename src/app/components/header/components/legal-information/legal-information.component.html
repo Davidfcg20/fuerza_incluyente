@@ -5,9 +5,9 @@
       <p>Te invitamos a consultar nuestra información legal.</p>
 
       @for (item of legalInformation(); track $index) {
-        <section>
+        <section class="flex flex-col sm:flex-row sm:gap-2 sm:items-center">
           <h2 class="font-berlin-demi">{{item.title}}</h2>
-          <a [href]="item.path" target="_blank" class="text-xs">¡Conoce aquí!</a>
+          <a [href]="item.path" target="_blank" class="text-xs text-blue-primary">¡Conoce aquí!</a>
         </section>
       }
 
