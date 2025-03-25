@@ -1,10 +1,13 @@
-<div class="flex flex-col gap-2">
-  <div class="flex flex-col text-center px-12 sm:px-44">
+<div id="services" class="flex flex-col gap-2">
+  <div class="flex flex-col text-center px-12 lg::px-44 lg:pb-8">
     <h2 class="font-berlin-demi">SERVICIOS</h2>
     <hr class="border-t-blue-primary border-t-4 rounded-xl" />
     <p class="px-4">
       Disponemos de una amplia variedad de servicios y productos para tu
       empresa.
+    </p>
+    <p class="text-sm">
+      ¡Toca cada uno de nuestros servicios para conocer más información!
     </p>
   </div>
   <div class="grid sm:grid-cols-4 text-center">
@@ -20,7 +23,15 @@
       class="flex justify-center items-center p-2 h-10 sm:h-32 cursor-pointer"
       (click)="openModal(subItem)"
     >
-      {{ subItem }}
+      <h2
+        [ngClass]="{
+          'after:bg-white': i === e,
+          'after:bg-black': i !== e,
+        }"
+        class="relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:transition-all after:duration-700 hover:after:w-full hover:after:right-0"
+      >
+        {{ subItem }}
+      </h2>
     </button>
     } }
   </div>

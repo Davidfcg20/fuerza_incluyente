@@ -18,12 +18,17 @@ export class LegalInformationComponent {
       path: 'documents/CAMARA_COMERCIO.pdf',
     },
     {
+      title: 'CERTIFICADO GOBERNACIÓN DE ANTIOQUIA',
+      path: 'documents/CERTIFICADO_GOBERNACION.pdf',
+    },
+
+    {
       title: 'ESTATUTOS CORPORACIÓN FUERZA INCLUYENTE',
       path: 'documents/ESTATUTOS_CORPORACION.pdf',
     },
     {
-      title: 'CERTIFICADO GOBERNACIÓN DE ANTIOQUIA',
-      path: 'documents/CERTIFICADO_GOBERNACION.pdf',
+      title: 'INFORME DE GESTION',
+      path: 'documents/INFORME_DE_GESTION.pdf',
     },
     {
       title: 'REGLAMENTO INTERNO',

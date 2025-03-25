@@ -13,13 +13,16 @@
   </div>
 
   <div
-    class="flex flex-row gap-4 items-center justify-center sm:justify-end font-berlin-demi"
+    class="flex flex-row gap-4 items-center justify-center sm:justify-end font-berlin-demi md:mr-4"
   >
-    <button class="bg-yellow-secondary rounded-xl h-12 px-4 text-black text-sm">
+    <button
+      class="bg-yellow-secondary transition-colors duration-600 ease-in-out hover:bg-yellow-secondary-hover rounded-xl h-12 px-4 text-black text-sm cursor-pointer"
+      onclick="donation_modal.showModal()"
+    >
       DONACIONES
     </button>
     <button
-      class="bg-green-tertiary rounded-xl h-12 px-4 text-black text-sm cursor-pointer"
+      class="bg-green-tertiary transition-colors duration-600 ease-in-out hover:bg-green-tertiary-hover rounded-xl h-12 px-4 text-black text-sm cursor-pointer"
       onclick="legal_information_modal.showModal()"
     >
       INFORMACIÓN LEGAL
@@ -28,3 +31,4 @@
 </header>
 
 <app-legal-information />
+<app-donation />

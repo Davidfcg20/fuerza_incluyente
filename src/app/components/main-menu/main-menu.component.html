@@ -1,14 +1,30 @@
 <div
-  [ngClass]="menuOpen() ? 'grid-rows-[1fr]' : 'grid-rows-[0fr] sm:grid-rows-[1fr]'"
+  [ngClass]="
+    menuOpen() ? 'grid-rows-[1fr]' : 'grid-rows-[0fr] sm:grid-rows-[1fr]'
+  "
   class="grid transition-[grid-template-rows] sm:transition-none duration-400 ease-in-out"
 >
   <nav class="overflow-hidden">
     <div
       class="h-20 grid grid-cols-[auto_auto_auto] items-center text-center font-berlin-demi sm:text-lg text-white bg-blue-primary px-2 gap-2"
     >
-      <div>¿QUIÉNES SOMOS?</div>
-      <div>SERVICIOS</div>
-      <div>CONTÁCTANOS</div>
+      <a
+        (click)="scrollToSection('about-us')"
+        class="relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:transition-all after:duration-700 hover:after:w-full hover:after:right-0 after:bg-white cursor-pointer w-max mx-auto"
+        >¿QUIÉNES SOMOS?</a
+      >
+
+      <a
+        (click)="scrollToSection('services')"
+        class="relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:transition-all after:duration-700 hover:after:w-full hover:after:right-0 after:bg-white cursor-pointer w-max mx-auto"
+        >SERVICIOS</a
+      >
+
+      <a
+        (click)="scrollToSection('contact-us')"
+        class="relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:transition-all after:duration-700 hover:after:w-full hover:after:right-0 after:bg-white cursor-pointer w-max mx-auto"
+        >CONTÁCTANOS</a
+      >
     </div>
   </nav>
 </div>

@@ -8,4 +8,11 @@ import { Component, input } from '@angular/core';
 })
 export class MainMenuComponent {
   menuOpen = input.required<boolean>();
+
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
 }

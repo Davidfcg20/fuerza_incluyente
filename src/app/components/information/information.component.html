@@ -1,31 +1,33 @@
 <div class="grid sm:grid-cols-2 gap-4 mx-4 sm:mx-8 lg:mx-20">
-  <div class="flex flex-col justify-center ">
+  <div class="flex flex-col justify-center">
     <h2 class="font-berlin-demi">¿SABIAS QUÉ?</h2>
     <hr class="border-t-blue-primary border-t-4 rounded-xl" />
-    <p class="py-2">
-      El informe de ACNUR Tendencias Globales de Desplazamiento Forzado presenta
-      las tendencias y los datos estadísticos más actualizados sobre personas
-      refugiadas, solicitantes de asilo, desplazadas internas y apátridas.
-    </p>
-    <p>
-      Conflictos nuevos y existentes han provocado un aumento del desplazamiento
-      forzado en todo el mundo, en 2023, con más de 117,3 millones desplazadas
-      por la fuerza a finales de año.
-    </p>
+    <div class="flex flex-col gap-2 py-2">
+      <p>
+        En Colombia las personas con discapacidad tienen leyes y normas que los
+        protegen, conozcamos juntos algunas de ellas.
+      </p>
+      @for (item of informationToShare(); track $index) {
+      <a [href]="item.path" target="_blank" class="text-sm">
+        {{ item.title }}
+      </a>
+      }
+    </div>
     <div class="flex justify-center">
       <button
-        class="bg-yellow-secondary rounded-xl h-12 px-4 text-black text-sm font-berlin-demi"
+        class="bg-yellow-secondary transition-colors duration-600 ease-in-out hover:bg-yellow-secondary-hover rounded-xl h-12 px-4 text-black text-sm font-berlin-demi cursor-pointer"
+        onclick="how_can_help_modal.showModal()"
       >
         ¿CÓMO PUEDO AYUDAR?
       </button>
     </div>
   </div>
   <div class="flex justify-center items-center">
-
     <img
       src="images/information_picture.jpg"
       alt=""
-      class=" object-cover w-144 h-48 sm:h-88"
+      class="object-cover w-144 h-48 sm:h-88"
     />
   </div>
 </div>
+<app-how-help />

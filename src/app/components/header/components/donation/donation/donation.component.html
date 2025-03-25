@@ -1,0 +1,59 @@
+<dialog id="donation_modal" class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+    <div class="flex flex-col gap-2 max-h-80 sm:max-h-none overflow-auto">
+      <h2 class="font-berlin-demi">DONACIONES</h2>
+      <p class="">
+        Nuestra <span class="font-berlin-demi">CORPORACIÓN</span> se dedica a
+        generar acciones que promuevan y defiendan los derechos de las personas
+        con discapacidad. Con tus donaciones ayudas a beneficiar nuestros
+        programas y proyectos, si tu donación es en efectivo puedes consignar en
+        la siguiente cuenta a nombre de la
+        <span class="font-berlin-demi">
+          CORPORACIÓN FUERZA INCLUYENTE CON NIT 901812136-6</span
+        >.
+      </p>
+
+      @for (item of legalInformation(); track $index) {
+      <section class="">
+        <div class="flex flex-row items-center justify-center">
+          <button
+            class="bg-yellow-secondary transition-colors duration-600 ease-in-out hover:bg-yellow-secondary-hover rounded-xl w-fit h-12 px-4 flex flex-col items-center justify-center cursor-pointer"
+            (click)="copyBankAccount()"
+          >
+            <h2 class="font-berlin-demi text-center">
+              {{ item.title }}
+            </h2>
+          </button>
+        </div>
+
+        <div
+          [ngClass]="copyAccountAlert() ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'"
+          class="grid transition-[grid-template-rows] duration-400 ease-in-out pt-2"
+        >
+          <nav
+            class="overflow-hidden flex flex-row items-center justify-center"
+          >
+            <div
+              class="flex flex-row gap-1 items-center justify-center rounded-xl w-fit bg-green-tertiary p-2"
+            >
+              <img src="icons/check-circle.svg" alt="" class="h-4 w-4" />
+              <p class="text-white text-sm">
+                ¡Número de cuenta copiado exitosamente!
+              </p>
+            </div>
+          </nav>
+        </div>
+
+        <p class="whitespace-pre-line text-center text-xs pt-2">
+          {{ item.text }}
+        </p>
+      </section>
+      }
+    </div>
+    <div class="modal-action justify-center">
+      <form method="dialog">
+        <button class="btn">Cerrar</button>
+      </form>
+    </div>
+  </div>
+</dialog>
